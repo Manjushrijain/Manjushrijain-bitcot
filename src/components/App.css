@@ -1,0 +1,399 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+header {
+  background-color: #66b4de;
+  color: rgb(246, 237, 237);
+  padding: 10px;
+  text-align: center;
+}
+
+h1 {
+  margin: 10px;
+}
+
+h2 {
+  padding-right: 20px;
+  color: #007bff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Contacts View */
+.contacts-list {
+  list-style-type: none; /* Removes bullet points */
+  padding: 2px; /* Removes default padding */
+ margin-left: 10px;
+  margin-right:1000px; /* Removes default margin */
+}
+
+.contacts-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:2px; /* Adjust margin to make buttons closer */
+  padding: 5px; /* Adjust padding if needed */
+  border: none;
+  border-radius: 4px;
+  background:white;
+}
+
+/* Basic button styles */
+.contacts-list button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #e7e5e5; /* Light grey background for default state */
+  color: #161616; /* Dark text color for contrast */
+  font-size: 14px; /* Adjust font size if needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specific button colors */
+.contacts-list .view-button {
+   /* Green for view */
+  color: white;
+  width: 1px;
+}
+
+.contacts-list .edit-button {
+  /* Amber for edit */
+  width: 1px;
+  color: white;
+}
+
+.contacts-list .delete-button {
+ /* Red for delete */
+  color: white;
+  width: 1px;
+}
+
+/* Hover styles for buttons */
+.contacts-list button:hover {
+  opacity: 0.8; /* Slightly transparent on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Optional: Focus style for accessibility */
+.contacts-list button:focus {
+  outline: 2px solid #007bff; /* Blue outline for focus state */
+  outline-offset: 2px; /* Space between outline and button */
+}
+
+/* Add Contact / Edit Contact */
+.contact-form label {
+  margin-bottom: 10px;
+}
+
+.contact-form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 17, 17, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Save button styles */
+.save-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Cancel button styles */
+.cancel-button {
+  background-color: #f44336; /* Red */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #c62828; /* Darker red on hover */
+}
+/* Styling for form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content {
+  background-color: rgb(226, 217, 217);
+  padding: 20px;
+  border-radius: 4px;
+  width: 50%;
+  max-width: 500px;
+}
+
+.modal h2 {
+  color: #333;
+  margin: 10px;
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  font-size: 15x;
+  font-weight: bold;
+}
+
+/* Editing Mode Styling */
+.editing {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 10px;
+}
+
+form button {
+  margin-top: 10px;
+}
+.man-icon {
+  width: 24px; /* Adjust width as needed */
+  height: 24px; /* Adjust height to maintain aspect ratio */
+  object-fit: cover; /* Ensures the image fits within the defined size */
+  margin-right: 8px; /* Space between the icon and the text */
+}
+
+/* Contact List Item Styles */
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #efe3e3;
+  border-radius: 4px;
+}
+
+/* Button Styles */
+button {
+  padding: 2px;
+  margin-left: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+  background-color: #161616;
+}
+
+/* Style for Submit button */
+.button-container button[type="submit"] {
+  padding: 8px 16px; /* Button padding */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 14px; /* Font size */
+  background-color: #007bff; /* Background color for submit button */
+  color: white; /* Text color */
+}
+
+.button-container button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}
+
+/* Style for Reset button */
+.button-container button[type="button"] {
+  padding: 8px 16px; /* Button padding */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 14px; /* Font size */
+  background-color: #6c757d; /* Background color for reset button */
+  color: white; /* Text color */
+}
+
+.button-container button[type="button"]:hover {
+  background-color: #5a6268; /* Darker background color on hover */
+}
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  width: 80%;
+  max-width: 500px;
+  position: relative; /* Ensure close button is positioned correctly */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Style for the close button on hover */
+.close-button:hover {
+  color: #000;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 10px;
+}
+
+.contact-form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Button group styles */
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Space between buttons */
+}
+
+.button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff; /* White text color */
+  font-size: 16px;
+}
+
+/* Update button styles */
+.update-button {
+  background-color: blue; /* Green background for Update */
+}
+
+.update-button:hover {
+  background-color: blue; /* Darker green on hover */
+}
+
+/* Reset button styles */
+.reset-button {
+  background-color:black; /* Red background for Reset */
+}
+
+.reset-button:hover {
+  background-color:black; /* Darker red on hover */
+}
+
+button img {
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+  background-color:black;
+}
+
+/* Specific Button Styles */
+.view-button {
+   
+  color:#161616;
+}
+
+.edit-button {
+  background-color: #FFC107; /* Amber */
+color: white;
+
+ 
+}
+
+.delete-button {
+  
+  color: white;
+}
+.contact-details-box {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+}
+
+.contact-details-box p {
+  margin: 5px 0;
+}
+
+.contact-details-box strong {
+  display: inline-block;
+  width: 100px; /* Adjust width to align labels */
+}
+
+/* Style for the close button */
+.close-details-button {
+  background-color: #4CAF50; /* Green background for Close */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.close-details-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
